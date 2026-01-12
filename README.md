@@ -39,14 +39,14 @@ An AI-powered poster generator for 51Talk Academy that creates personalized lear
    ```
 
 3. **Configure environment variables**
-   ```bash
-   cp .env.example .env.local
+
+   For local development, create a `.env.local` file:
+
+   ```
+   VITE_GEMINI_API_KEY=your_actual_api_key_here
    ```
 
-   Edit `.env.local` and add your Gemini API key:
-   ```
-   GEMINI_API_KEY=your_actual_api_key_here
-   ```
+   For Vercel deployment, add `VITE_GEMINI_API_KEY` in project settings.
 
 ## Development
 
@@ -79,7 +79,7 @@ This project is configured for deployment on Vercel:
 
 2. **Deploy on Vercel**
    - Connect your GitHub repository to Vercel
-   - Add `GEMINI_API_KEY` as an environment variable in Vercel settings
+   - Add `VITE_GEMINI_API_KEY` as an environment variable in Vercel settings
    - Deploy!
 
 Or use the Vercel CLI:
@@ -93,7 +93,7 @@ vercel --prod
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `GEMINI_API_KEY` | Your Google Gemini API key | Yes |
+| `VITE_GEMINI_API_KEY` | Your Google Gemini API key | Yes |
 
 ## Project Structure
 

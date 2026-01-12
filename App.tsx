@@ -106,9 +106,8 @@ No text inside image.`;
     }
 
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    if (!apiKey || apiKey === 'your_gemini_api_key_here') {
-      alert('Please configure your GEMINI_API_KEY in .env.local');
-      return;
+    if (!apiKey) {
+      throw new Error("VITE_GEMINI_API_KEY is not set in Vercel Environment Variables");
     }
 
     setIsLoading(true);
