@@ -1,0 +1,5 @@
+{
+  "name": "Class Poster Prompt Generator",
+  "description": "Internal tool for LP staff to generate AI prompts for Arabic class reminder posters with specific branding and student details.",
+  "requestFramePermissions": []
+}
